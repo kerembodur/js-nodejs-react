@@ -28,9 +28,9 @@ const runRainbow = rainbow();
 //    console.log(color); 
 // } 
 
-let sequence = [...rainbow()];
+// let sequence = [...rainbow()];
 
-console.log(sequence); 
+// console.log(sequence); 
 
 /******************************************************************************* */
 //dev tool console
@@ -54,3 +54,28 @@ console.log(sequence);
 // }
 // const runItr = run();
 // runItr.next();
+
+/******************************************************************************* */
+
+// function * fibonacci(seed1, seed2) {
+//    while (true) {
+//      yield (() => {
+//        seed2 = seed2 + seed1;
+//        seed1 = seed2 - seed1;
+//        return seed2;
+//      })();
+//    }
+//  }
+//  const fib = fibonacci(0, 1);
+//  console.log(fib.next());
+//  console.log(fib.next());
+//  console.log(fib.next());
+
+
+// Lazy Evaluation ile istenen değer daha sonra işletilerek oluşturulur. 
+// Bu sayede değeri önceden oluşturmak için CPU harcanmaz. 
+// Bu değerler bir bellekte fazladan yer tutulmadığı için Memory Efficient(bellek efektif) çalışmasını sağlar.
+
+// Generator fonksiyonlar oluşturulur ve tüketilir. 
+// Tükenen işlenen bir generator tekrar tekrar kullanılamaz tekrardan oluşturulması gerekir. 
+// Bir sefer erişilebilir yani.
