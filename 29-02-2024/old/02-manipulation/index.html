@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="container cont1">
+	<div id="div1" class="sort" type="row-1">Div 1</div>
+	<div id="div2" class="sort" type="row-2">Div 2</div>
+	<div id="div3" class="sort" type="row-3">Div 3</div>
+	<div id="div4" class="sort" type="row-4">Div 4</div>
+	<div id="div5" class="sort" type="row-5">Div 5</div>
+	<div id="div6" class="sort" type="row-6">Div 6</div>
+</div>
+
+<div class="container cont3">
+        <button id="btn1" class="my-buttons" onclick="onCreateElement()">Create Element</button>
+        <button id="btn2" class="my-buttons" onclick="onAddClass()">Add Class</button>
+        <button id="btn2" class="my-buttons" onclick="onRemoveClass()">Remove Class</button>
+        <button id="btn2" class="my-buttons" onclick="onAddAttr()">Add Attribute</button>
+        <button id="btn2" class="my-buttons" onclick="onRemoveAttr()">Remove Attribute</button>
+        <button id="btn2" class="my-buttons" onclick="onAppendChild()">append Child</button>
+        <button id="btn3" class="my-buttons" onclick="onInsertBefore()">insert Before</button>
+        <button id="btn4" class="my-buttons" onclick="onReplaceChild()">replace Child</button>
+        <button id="btn5" class="my-buttons" onclick="onRemove()">remove</button>
+        <button id="btn5" class="my-buttons" onclick="onRemoveChild()">remove Child</button>
+        <button id="btn5" class="my-buttons" onclick="onCloneNode()">clone Node</button>
+        <button id="btn5" class="my-buttons" onclick="onCloneNodeFull()">clone Node full</button>
+        <button id="btn5" class="my-buttons" onclick="onEmptyElement()">Empty an element's content</button>
+        <button id="btn5" class="my-buttons" onclick="onFillText()">Fill Text</button>
+    </div>
+
+<script>
+
+    var matches = document.getElementsByClassName('cont1')[0];
+    var el;
+    
+    var onCreateElement = () => {
+        el = document.createElement('div');
+        el.innerHTML = 'Hello World!';
+        el.id = 'div7';
+        console.log(el);
+    }
+
+    var onAddClass = () => {
+        el.classList.add('sort');
+        console.log(el);
+    }
+
+    var onRemoveClass = () => {
+        el.classList.remove('sort')
+        console.log(el);
+    }
+    
+    var onAddAttr = () => {
+        el.setAttribute('type', 'row-7');
+        console.log(el);
+    }
+
+    var onRemoveAttr = () => {
+        el.removeAttribute('type', 'row-7');
+        console.log(el);
+    }
+    
+    var onAppendChild = () => {
+        matches.appendChild(el);
+    }
+
+    var onInsertBefore = () => {
+        matches.insertBefore(el, matches.firstElementChild);
+        // matches.insertBefore(el, matches.firstElementChild.nextElementSibling);
+    }
+
+    var onReplaceChild = () => {
+        matches.replaceChild(el, matches.firstElementChild);
+    }
+
+    var onRemove = () => {
+        el.remove();
+    }
+
+    var onRemoveChild = () => {
+        matches.removeChild(matches.firstElementChild);
+    }
+
+    var onCloneNode = () => {
+        el = el.cloneNode(false);
+        console.log(el);
+    }
+
+     var onCloneNodeFull = () => {
+        el = el.cloneNode(true);
+        console.log(el);        
+    }
+
+    var onEmptyElement = () => {
+        el.innerHTML = '';
+    }
+
+    var onFillText = () => {
+        el.innerHTML = 'Merhaba !';
+    }
+
+</script>
+</body>
+</html>

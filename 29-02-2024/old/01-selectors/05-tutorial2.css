@@ -1,0 +1,50 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 14px;
+}
+
+
+
+.container * {
+	border: 5px solid black;
+	box-sizing: border-box;
+	padding: 3px;
+	margin: 3px;
+	text-align: center;
+}
+
+.mydiv{
+	transition: 250ms linear;
+}
+
+.mydiv::before,::after{
+	color: red;
+	margin-right: 10px;
+	margin-left: 10px;
+	opacity: 0;
+	transition: 250ms linear;
+}
+
+.mydiv::before{
+	content: 'before : ' attr(group);
+}
+
+.mydiv::after{
+	content: 'after : ' attr(type);
+}
+
+.mydiv:hover{
+	background-color: lightgrey;
+	transform: scale(1.1);
+}
+
+.mydiv:hover::before, .mydiv:hover::after{
+	opacity: 1;
+}
+
+.mydiv:active{
+	background-color: grey;
+
+}
