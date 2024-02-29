@@ -1,0 +1,1 @@
+start chrome --disable-web-security --user-data-dir="C:\work_environment\chromeTemp" --allow-running-insecure-content --disable-features=CrossSiteDocumentBlockingIfIsolating --ignore-certificate-errors
