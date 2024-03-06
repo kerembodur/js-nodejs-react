@@ -1,19 +1,22 @@
+// Lambda Functions - Arrow Functions
+
 // let topla = (a, b) => a + b;
 
-/* ok fonksiyonu aşağıdaki fonksiyon ifadesinin daha özlü yazılmış halidir.:
+// console.log(topla(3, 5));
 
-let topla = function(a, b) {
-  return a + b;
-};
-*/
+// same
 
-// console.log( topla(1, 2) ); // 3
+// let topla = function(a, b) {
+//   return a + b;
+// };
+
+// console.log( topla(3, 5) );
 
 ///////////////////////////////////////////////////////////////
 
 // aynısı
 // let ikiKati = function(n) { return n * 2 }
-// let ikiKati = n => n * 2;
+// let ikiKati = n => n * 2; // tek arguman olduğu için parantez yok.
 
 // console.log( ikiKati(3) ); // 6
 
@@ -41,3 +44,11 @@ let topla = function(a, b) {
 // };
 
 // console.log( toplam(1, 2) ); // 3
+
+///////////////////////////////////////////////////////////////
+
+// let argumanParams = () =>  {
+//   console.log( arguments );
+// }
+
+// argumanParams("Kerem", "Bodur");

@@ -27,6 +27,49 @@
 // greetFunc('John');
 
 ///////////////////////////////////////////////////////////////
+// let yas = 16; // yaş 16 diyelim.
+
+// if (yas < 18) {
+//   merhaba();               // \   (çalışır)
+//                            //  |
+//   function merhaba() {     //  |
+//     console.log("Merhaba!");     //  |  Fonksiyon tanımı bu blok içirisinde her yerden çağırılabilir.
+//   }                        //  |
+//                            //  |
+//   merhaba();               // /   (çalışır)
+
+// } else {
+
+//   function merhaba() {     //  Yaş 16 olduğundan burası hiçbir zaman çalışmaz.
+//     console.log("Merhabalar!");
+//   }
+// }
+// // Artık if bloğunun dışında olduğumuzdan dolayı burada fonksiyon tanımlarına ulaşamayız.
+// merhaba(); // Error: merhaba tanımlı değil.
+
+//to
+
+// let yas = prompt("Kaç yaşındasın?", 18);
+
+// let merhaba;
+
+// if (yas < 18) {
+
+//   merhaba = function() {
+//     console.log("Merhaba!");
+//   };
+
+// } else {
+
+//   merhaba = function() {
+//     console.log("Merhabalar!");
+//   };
+
+// }
+
+// merhaba(); // artık çalışır.
+
+///////////////////////////////////////////////////////////////
 
 // using an Immediately Invoked Function Expression (IIFE)
 // var greeting = function(name) {
@@ -43,7 +86,7 @@
 // (function(name) {
 //     var greeting = 'Inside IIFE: Hello';
 //     console.log(greeting + ' ' + name);
-// }(firstname)); // IIFE
+// }(firstname)); // IIFE & anonymous
 
 ///////////////////////////////////////////////////////////////
 
@@ -102,51 +145,103 @@
 
 
 ///////////////////////////////////////////////////////////////
-// let yas = 16; // yaş 16 diyelim.
 
-// if (yas < 18) {
-//   merhaba();               // \   (çalışır)
-//                            //  |
-//   function merhaba() {     //  |
-//     console.log("Merhaba!");     //  |  Fonksiyon tanımı bu blok içirisinde her yerden çağırılabilir.
-//   }                        //  |
-//                            //  |
-//   merhaba();               // /   (çalışır)
-
-// } else {
-
-//   function merhaba() {     //  Yaş 16 olduğundan burası hiçbir zaman çalışmaz.
-//     console.log("Merhabalar!");
+// function selamVer() {
+//     console.log("Selam");
 //   }
+//   console.log(selamVer.name); 
+
+// let selamVer = function() {
+//   console.log("Selam");
 // }
-// // Artık if bloğunun dışında olduğumuzdan dolayı burada fonksiyon tanımlarına ulaşamayız.
-// merhaba(); // Error: merhaba tanımlı değil.
+// console.log(selamVer.name);
 
-//to
-
-// let yas = prompt("Kaç yaşındasın?", 18);
-
-// let merhaba;
-
-// if (yas < 18) {
-
-//   merhaba = function() {
-//     console.log("Merhaba!");
-//   };
-
-// } else {
-
-//   merhaba = function() {
-//     console.log("Merhabalar!");
-//   };
-
+// let kullanici = {
+//   selamVer() {  },
+//   yolcuEt: function() { },
+//   elSalla: () => { }
 // }
 
-// merhaba(); // artık çalışır.
+// console.log(kullanici.selamVer.name);
+// console.log(kullanici.yolcuEt.name); 
+// console.log(kullanici.elSalla.name); 
+
+///////////////////////////////////////////////////////////////
+// let more = [1, 2, 3];
+// function f1(a) {}
+// function f2(a, b) {}
+// function many(a, b, ...more) {}
+
+// console.log(f1.length); // 1
+// console.log(f2.length); // 2
+// console.log(many.length); // 2
 
 ///////////////////////////////////////////////////////////////
 
-// var myVar = 1 > 0 ? 'Doğru' : 'Yanlış';
+// let selamVer = function func(kim) {
+//   if (kim) {
+//     console.log(`Selam, ${kim}`);
+//   } else {
+//     func("Misafir"); // kendisni yeniden çağırabilir.
+//     // selamVer("Misafir");
+//   }
+// };
+
+// selamVer(); // Selam, Misafir
+
+// Fakat aşağıdaki çalışmayacaktır:
+// func(); // func tanımlı değildir. ( Fonksiyonun dışından erişilemez.)
+
+
+// ----------
+
+// let selamVer = function(kim) {
+//   if (kim) {
+//     console.log(`Selam, ${kim}`);
+//   } else {
+//     selamVer("Misafir");
+//   }
+// };
+
+// let hosGeldin = selamVer;
+// selamVer = null;
+
+// hosGeldin(); //Artık selamVer çağırılamaz.
+
+// ----------
+
+// let selamVer = function func(kim) {
+//   if (kim) {
+//     console.log(`Selam, ${kim}`);
+//   } else {
+//     func("Misafir"); // Şimdi hepsi doğru şekilde çalışır.
+//   }
+// };
+
+// let hosGeldin = selamVer;
+// selamVer = null;
+
+// hosGeldin(); // Selam, Misafir (iç çağrı çalışır)
+
+///////////////////////////////////////////////////////////////
+
+
+// function argumanParams() {
+//     console.log( arguments.length );
+//     console.log( arguments );
+//     console.log( arguments[0] );
+//     console.log( arguments[1] );
+  
+//     // Döngüye de alınabilir
+//     // for(let arg of arguments) console.log(arg);
+//   }
+  
+//   argumanParams("Kerem", "Bodur");
+  
+//   // (ikinci bir argüman yok.)
+//   argumanParams("Emrah");
+
+
 
 
 

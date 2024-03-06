@@ -47,3 +47,7 @@
 // console.log( undefined > 0 ); // false (1)
 // console.log( undefined < 0 ); // false (2)
 // console.log( undefined == 0 ); // false (3)
+
+//////////////////////////////////////////////////////////
+
+// var myVar = 1 > 0 ? 'Doğru' : 'Yanlış';

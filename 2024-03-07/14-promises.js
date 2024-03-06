@@ -1,22 +1,22 @@
 
-var ogrenciyiBul = new Promise(function (resolve, reject) {
-    console.log("Ogrenci bulunuyor");
+// var ogrenciyiBul = new Promise(function (resolve, reject) {
+//     console.log("Ogrenci bulunuyor");
 
-    setTimeout(function () {
-        console.log("Ogrenci bulundu");
-        resolve("Kerem");
-        // reject("Bulunamadı !");
-    }, 1000);
+//     setTimeout(function () {
+//         console.log("Ogrenci bulundu");
+//         resolve("Kerem");
+//         // reject("Bulunamadı !");
+//     }, 1000);
 
-});
+// });
 
-ogrenciyiBul
-    .then(function (param) {
-        console.log('Sorgular Tamam : ', param);
-    })
-    .catch(hata => {
-        console.log('hata : ', hata);
-    });
+// ogrenciyiBul
+//     .then(function (param) {
+//         console.log('Sorgular Tamam : ', param);
+//     })
+//     .catch(hata => {
+//         console.log('hata : ', hata);
+//     });
 
 //////////////////////////////////////////////////////////
 
@@ -43,7 +43,7 @@ ogrenciyiBul
 
 // });
 
-// var isim, sinif, okul;
+// // var isim, sinif, okul;
 // ogrenciyiBul
 //     .then(sinifiBul)
 //     .then(okuluBul)
@@ -74,25 +74,25 @@ ogrenciyiBul
 // });
 
 
-// var search1 = function () {
-//     return new Promise(function (resolve, reject) {
+var search1 = function () {
+    return new Promise(function (resolve, reject) {
 
-//         var time = parseInt(Math.random() * 1000);
-//         console.log('time :', time);
+        var time = parseInt(Math.random() * 1000);
+        console.log('time :', time);
 
-//         setTimeout(function () {
-//             resolve();
-//             console.log("Arama1 sonlandi. ", time);
+        setTimeout(function () {
+            resolve();
+            console.log("Arama1 sonlandi. ", time);
 
-//         }, time);
+        }, time);
 
-//     });
-// }
-
-
+    });
+}
 
 
-// Promise.race([search1(), search1(), search1()]).then(function () {
-//     console.log("Tek bir arama bitti");
 
-// });
+
+Promise.race([search1(), search1(), search1()]).then(function () {
+    console.log("Tek bir arama bitti");
+
+});
