@@ -1,0 +1,289 @@
+Sohbet
+	tanışma
+	
+	kendinden bahset
+		yaptığın işler
+		tecrübeler
+		verdiğin eğitimler
+		ne zamandır vermediğin
+		
+	ne iş yaparlar
+	seviyeleri ne
+	javascript ile ne yapacaklar
+	web ile ile ilgili konuşma
+	browser ve dertleri
+	javascript ile ilgili konuşma
+	
+html
+	VScode'dan bahset
+
+	html dosya oluşturma, editleme
+	
+	01-html boilerplate 
+		tagler nedir
+		
+	02-html tag tablosunu inceleme
+		tag kullanarak accessibility -ulaşılabilirlik anlat
+	
+	02.1- boilerplate'de js ve css dosyası ekleme.. html içi/dışı.. defer
+	
+	developer tool anlat, 
+		element
+		style 
+			başka siteler ile örnek ver.. element ve stylelar ile oyna
+		console
+		network
+		source
+		disable cache
+		hard reload
+	
+	Dom (document object modelden bahset)
+		dom.gif
+		consoldan objeye bak
+	
+	selectorler
+		class, id, attributes, anlat
+		03-js ile	index
+		04-css ile 
+			önce img2 göster
+		05-after before önemi, hover
+		
+	manipulation (dom)
+	
+	styles css
+		developertool üzerinden stylelara bak
+		css hiyerarşisi 
+			02.1- boilerplate'de
+			inline > html içi > external    
+			son yazılan
+			daha spesifik
+	
+	
+	3d Cube / layout
+	
+	npm -v
+node -v
+npm install socket.io -g --save-dev
+npm uninstall socket.io 
+npm update socket.io
+npm list
+npm outdated  - paketlerin durumlarını öğrenmek için:
+npm init / npm init -y
+////////////////////////////////////////////////////
+npm init
+mkdir src
+src/index.js -- console.log("Hello webpack!");
+src/index.html: -- test
+src/js/app.js
+src/styles/style.css
+
+npm i webpack webpack-cli webpack-dev-server --save-dev
+
+"scripts": {
+    "dev": "webpack --mode development"
+},
+
+npm run dev -- çıktıyı incele kodu gör
+"build": "webpack --mode production"
+npm run build
+
+webpack.config.js
+module.exports = {
+  //
+};
+
+const path = require("path");
+module.exports = {
+  //bizdeki entry defoult o yüzden gerek yok
+  //entry: { index: path.resolve(__dirname, "source", "index.js") }
+};
+
+const path = require("path");
+module.exports = {
+  output: {
+	//dist kullanacağımı için gerek yok
+    //path: path.resolve(__dirname, "build")
+  }
+};
+
+
+npm i html-webpack-plugin --save-dev
+
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require("path");
+module.exports = {
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html")
+    })
+  ]
+};
+
+npm run dev -- çıktıyı incele html'e bak
+
+npm i webpack-dev-server --save-dev
+"start": "webpack serve --open",
+npm start
+index.js ve app.js doldur
+	import { sayHello } from "./js/app";    export function sayHello() {
+	sayHello();									console.log('Hello! I am imported.');
+												msg1();
+											}
+
+											var msg1 = () => { 
+												console.log("function invoked");
+											} 
+npm run dev js cıktıyı incele
+
+src/index.js  -- import "./style.css";
+
+npm i css-loader style-loader --save-dev
+ module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  }
+};
+
+npm i @babel/core babel-loader @babel/preset-env --save-dev
+babel.config.json
+{
+  "presets": [
+    "@babel/preset-env"
+  ]
+}
+{
+    test: /\.js$/,
+    exclude: /node_modules/,
+    use: ["babel-loader"]
+}
+
+npm i @babel/preset-react --save-dev
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
+
+npm i react react-dom
+
+import React, { useState } from "react";
+import { render } from "react-dom";
+
+function App() {
+    const [state, setState] = useState("CLICK ME");
+
+    return <button onClick={() => setState("CLICKED")}>{state}</button>;
+}
+
+render(<App />, document.getElementById("root"));
+
+
+optimization.splitChunks
+npm i moment
+import moment from "moment";
+optimization: {
+        splitChunks: { chunks: "all" }
+},
+npm run build
+
+npm i luxon
+const { DateTime } = require("luxon");
+npm run build
+output: {
+       clean: true,
+},
+npm run build
+
+3d Cube / layout
+
+syntax 
+	semicolon
+	command
+	case sensitive
+	
+var let const
+	var 
+		fomksiyon dışı global, fonksiyon içi sadece fonksiyondan
+		yeniden tanımlanabilir, güncellenebilir
+	
+	undefined/null
+	
+03 scope questions
+	1
+	
+	undefined - jhon Doe ... person.getName.bind(person)
+	
+	1 - undefined - 2
+	
+	(function () {
+		var x, y; // outer and hoisted
+		try {
+			throw new Error();
+		} catch (x /* inner */) {
+			x = 1; // inner x, not the outer one
+			y = 2; // there is only one y, which is in the outer scope
+			console.log(x /* inner */);
+		}
+		console.log(x);
+		console.log(y);
+	})();
+	
+	var x = 21;
+	var getAge = function () {
+		var x;
+		console.log(x);
+		x = 20;
+	};
+	getAge ();
+	
+05 functions
+	Arguments
+	global kapsamda çağrılan merhaba fonksiyonu da Window nesnesine ayarlanacaktır.
+	Bir objenin içerisinde çağrıldığında ise this objenin kendisine atanacaktır.
+	constructor olarak çağrıldığında, this yeni oluşturulan nesneyi ifade eder.
+	Event Listener olarak çağırıldığında this elementin kendisini ifade eder.
+	Arrow fonksiyonlarda this, fonksiyon nasıl çağrılırsa çağrılsın asla yeni bir değere bağlanmaz. this her zaman onu çevreleyen kodun this değeriyle aynı değerde olacaktır.
+	1- Arrow fonksiyonlar, function anahtar kelimesi kullanmadıkları için constructor olarak kullanılamazlar.
+	2- Arrow fonksiyonları kullanırken dikkat edilmesi gereken yerlerden biriside click handle’ lar dır.
+		örnekli
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

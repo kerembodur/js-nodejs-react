@@ -47,6 +47,18 @@
 
 ///////////////////////////////////////////////////////////////
 
+// var firstname = 'John';
+
+// function test (){
+//     var firstname = "test";
+//     // firstname = "test";
+// }
+
+// test();
+// console.log(firstname);
+
+///////////////////////////////////////////////////////////////
+
 //with ES6
 
 // function func5(name = "Kerem", surname = "Bodur") {
@@ -90,8 +102,51 @@
 
 
 ///////////////////////////////////////////////////////////////
+// let yas = 16; // yaş 16 diyelim.
 
+// if (yas < 18) {
+//   merhaba();               // \   (çalışır)
+//                            //  |
+//   function merhaba() {     //  |
+//     console.log("Merhaba!");     //  |  Fonksiyon tanımı bu blok içirisinde her yerden çağırılabilir.
+//   }                        //  |
+//                            //  |
+//   merhaba();               // /   (çalışır)
 
+// } else {
+
+//   function merhaba() {     //  Yaş 16 olduğundan burası hiçbir zaman çalışmaz.
+//     console.log("Merhabalar!");
+//   }
+// }
+// // Artık if bloğunun dışında olduğumuzdan dolayı burada fonksiyon tanımlarına ulaşamayız.
+// merhaba(); // Error: merhaba tanımlı değil.
+
+//to
+
+// let yas = prompt("Kaç yaşındasın?", 18);
+
+// let merhaba;
+
+// if (yas < 18) {
+
+//   merhaba = function() {
+//     console.log("Merhaba!");
+//   };
+
+// } else {
+
+//   merhaba = function() {
+//     console.log("Merhabalar!");
+//   };
+
+// }
+
+// merhaba(); // artık çalışır.
+
+///////////////////////////////////////////////////////////////
+
+// var myVar = 1 > 0 ? 'Doğru' : 'Yanlış';
 
 
 
