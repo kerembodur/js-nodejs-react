@@ -97,9 +97,9 @@
 // console.log(greeting);
 
 //////////////////////////////////////////////////////////
-
+// "use strict";
 // const greeting = "say Hi";
-// greeting = "say Hello instead";// error: Assignment to constant variable. 
+// // greeting = "say Hello instead";// error: Assignment to constant variable. 
 // delete greeting;
 // console.log(greeting);
 //////////////////////////////////////////////////////////
