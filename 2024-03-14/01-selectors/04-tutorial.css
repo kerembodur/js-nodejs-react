@@ -1,0 +1,79 @@
+/* html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-size: 30px;
+} */
+
+/* p {
+    margin: 3px;
+} */
+
+ /* span {
+    display: block;
+} */
+
+
+/* #container1 {
+	background-color: blue;
+}  */
+
+/* #container2 {
+	background-color: red;
+} */
+
+/* .mydiv{
+	color: white;
+} */
+
+/* span{
+	color: green;
+} */
+
+/* p {
+	color: yellow;
+} */
+
+/* * {
+	border: 5px solid black;
+	box-sizing: border-box;
+	padding: 3px;
+	margin: 3px;
+} */
+
+/* span,p {
+	border-color: cyan; 
+} */
+
+/* span > p{
+	background-color: white;
+	color: darkgrey;
+} */
+
+
+/* [group] {
+	color: white;
+} */
+
+/* div[group="1"] {
+	color: black;
+} */
+
+
+/* [group*=header] {
+	color: blue;
+} */
+
+/* .container :first-child{
+	font-size: 20px
+} */
+
+/* div:not(p){
+	border-color: green;
+} */
+
+/* div:empty{
+	width: 100px;
+	height: 100px;
+	background-image: url('img1.PNG');
+} */
