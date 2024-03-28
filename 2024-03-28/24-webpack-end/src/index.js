@@ -6,14 +6,14 @@ import myComponent from './myComponent';
 console.log('Interesting!');
 
 // Create a class property without a constructor
-class Game {
-    name = 'Test Game!';
+class Bike {
+    name = 'Triumph!';
 }
 
-const myGame = new Game()
+const myBike = new Bike()
 // Create paragraph node
 const p = document.createElement('p');
-p.textContent = `I like ${myGame.name}.`;
+p.textContent = `I like ${myBike.name}.`;
 
 
 // Create heading node

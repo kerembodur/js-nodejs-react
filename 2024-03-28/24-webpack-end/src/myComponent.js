@@ -13,6 +13,6 @@ export default function myComponent(){
 
     console.log('I am a component');
 
-    console.log(sorted);
+    console.table(sorted);
 
 }
