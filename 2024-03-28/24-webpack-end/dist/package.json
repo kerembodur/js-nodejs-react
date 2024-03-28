@@ -1,0 +1,1 @@
+{"name":"PAT-template","description":"Npm package of PAT","main":"index.js","scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":"Kerem","license":"ISC","dependencies":{},"version":"1.0.0"}

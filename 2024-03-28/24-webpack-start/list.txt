@@ -1,0 +1,13 @@
+*npm init -y
+
+*npm i -D webpack webpack-cli
+
+*npm run build
+
+*npm i -D html-webpack-plugin
+
+npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-env @babel/plugin-proposal-class-properties
+
+npm i -D copy-webpack-plugin
+
+npm i --save lodash

@@ -1,0 +1,20 @@
+{
+    "en_EN": {
+        "send_message": "Send Demo Message",
+        "change_language": "Change Language",
+        "configFileError": "Config File Fetch Error!",
+        "languageFileError": "Language File Fetch Error!"
+    },
+    "tr_TR": {
+        "send_message": "Demo Mesajı Gönder",
+        "change_language": "Dil Değiştir",
+        "configFileError": "Config Dosyası Okunamıyor!",
+        "languageFileError": "Dil Dosyası Okunamıyor!"
+    },
+    "ar_AR": {
+        "send_message": "إرسال رسالة تجريبية",
+        "change_language": "تغيير اللغة",
+        "configFileError": "خطأ في إحضار ملف التكوين!",
+        "languageFileError": "خطأ في إحضار ملف اللغة!"
+    }
+}
